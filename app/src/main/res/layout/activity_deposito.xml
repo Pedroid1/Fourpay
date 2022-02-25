@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="25dp"
-    tools:context=".activitys.RecargaActivity">
+    tools:context=".activitys.DepositoActivity">
 
     <android.widget.Button
         android:id="@+id/seta_voltar"
@@ -12,7 +12,6 @@
         android:layout_height="32dp"
         android:background="@drawable/ic_voltar"
         android:backgroundTint="@color/azul_medio"
-        android:onClick="voltar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
