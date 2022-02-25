@@ -49,9 +49,7 @@ public class FirstRegisterFragment extends Fragment {
         sharedViewModel = new ViewModelProvider(requireActivity()).get(RegisterViewModel.class);
         binding.setViewModel(sharedViewModel);
 
-        RetrofitMethods retrofitMethods = RetrofitService.getRetrofitInstance().create(RetrofitMethods.class);
-
-
+        sharedViewModel.setNomeCompleto("Hint atualizado");
 
         binding.btnContinuar.setOnClickListener(view1 -> {
             if (!binding.txtNome.getText().toString().isEmpty() &&

@@ -11,8 +11,9 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface RetrofitMethods {
-    @POST("contas/create")
-    Call<Conta> contaPost(@Body Conta conta);
+
+    @GET("login/{email}/{senha}")
+    Call<Conta> contaLoginGet(@Path("email") String email, @Path("senha") String senha);
 
     @GET("contas/read/{id}")
     Call<Conta> contaGet(@Path("id") int id);
@@ -22,6 +23,9 @@ public interface RetrofitMethods {
 
     @POST("clientes/create")
     Call<Cliente> clientePost(@Body Cliente cliente);
+
+    @POST("contas/create")
+    Call<Conta> contaPost(@Body Conta conta);
 }
 
 

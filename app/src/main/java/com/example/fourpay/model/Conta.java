@@ -12,21 +12,9 @@ public class Conta implements Serializable {
 
     private Double saldo = 0.0;
 
-    private String senha = "123456";
+    private String senha = "654321";
 
     private Cliente cliente = new Cliente();
-
-    private TipoConta tipoConta = TipoConta.POUPANCA;
-
-    private CartaoCredito cartaoCredito = new CartaoCredito();
-
-    private CartaoDebito cartaoDebito = new CartaoDebito();
-
-    private Double taxa = 0.0;
-
-    private String dataTaxa = "2001-05-21";
-
-    private List<Recarga> list = new ArrayList<>();
 
 
     public Long getId() {
@@ -60,53 +48,4 @@ public class Conta implements Serializable {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-
-    public TipoConta getTipoConta() {
-        return tipoConta;
-    }
-
-    public void setTipoConta(TipoConta tipoConta) {
-        this.tipoConta = tipoConta;
-    }
-
-    public CartaoCredito getCartaoCredito() {
-        return cartaoCredito;
-    }
-
-    public void setCartaoCredito(CartaoCredito cartaoCredito) {
-        this.cartaoCredito = cartaoCredito;
-    }
-
-    public CartaoDebito getCartaoDebito() {
-        return cartaoDebito;
-    }
-
-    public void setCartaoDebito(CartaoDebito cartaoDebito) {
-        this.cartaoDebito = cartaoDebito;
-    }
-
-    public Double getTaxa() {
-        return taxa;
-    }
-
-    public void setTaxa(Double taxa) {
-        this.taxa = taxa;
-    }
-
-    public String getDataTaxa() {
-        return dataTaxa;
-    }
-
-    public void setDataTaxa(String dataTaxa) {
-        this.dataTaxa = dataTaxa;
-    }
-
-    public List<Recarga> getList() {
-        return list;
-    }
-
-    public void setList(List<Recarga> list) {
-        this.list = list;
-    }
-
 }

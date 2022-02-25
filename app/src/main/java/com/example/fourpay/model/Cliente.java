@@ -1,14 +1,6 @@
 package com.example.fourpay.model;
 
-import android.util.Log;
-
-import com.example.fourpay.model.enums.TipoCliente;
-import com.example.fourpay.model.enums.TipoConta;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 import java.io.Serializable;
-import java.util.Date;
 
 public class Cliente implements Serializable {
 
@@ -16,17 +8,15 @@ public class Cliente implements Serializable {
 
     private String cpf = "090.336.044-11";
 
-    private String nome = "Joao cabelin";
+    private String nome = "Pedro cabelin";
 
     private String dataDeNascimento = "2022-02-23";
 
     private Endereco endereco = new Endereco();
 
-    private String email = "joão@gamil.com";
+    private String email = "pedrao@gmail.com";
 
     private String telefone = "+55(74)99963-7391";
-
-    private TipoCliente tipo = TipoCliente.COMUM;
 
     public Cliente() {
     }
@@ -63,7 +53,6 @@ public class Cliente implements Serializable {
         this.dataDeNascimento = dataDeNascimento;
     }
 
-    /*
     public Endereco getEndereco() {
         return endereco;
     }
@@ -71,8 +60,6 @@ public class Cliente implements Serializable {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
-
-     */
 
     public String getEmail() {
         return email;
@@ -89,24 +76,5 @@ public class Cliente implements Serializable {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-
-    public TipoCliente getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoCliente tipo) {
-        this.tipo = tipo;
-    }
-
-    /*
-    public Object getDataString() {
-        return dataString;
-    }
-
-    public void setDataString(Object dataString) {
-        this.dataString = dataString;
-    }
-
-     */
 
 }
