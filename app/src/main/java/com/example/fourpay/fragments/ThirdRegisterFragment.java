@@ -35,14 +35,15 @@ public class ThirdRegisterFragment extends Fragment {
         sharedViewModel = new ViewModelProvider(requireActivity()).get(RegisterViewModel.class);
 
         binding.btnContinuar.setOnClickListener(view2 -> {
+            String renda = binding.edtRenda.getText().toString();
 
-            if (!binding.edtRenda.getText().toString().isEmpty()) {
+            if (!renda.isEmpty()) {
 
-                //TODO
+                sharedViewModel.setRenda(binding.edtRenda.getText().toString());
 
             } else {
 
-                if (binding.edtRenda.getText().toString().isEmpty()) {
+                if (renda.isEmpty()) {
                     binding.edtRenda.setError("Renda obrigatória");
                 }
             }

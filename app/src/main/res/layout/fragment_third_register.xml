@@ -95,6 +95,7 @@
                     android:drawableEnd="@drawable/ic_renda"
                     android:fontFamily="@font/ubuntu_regular"
                     android:hint="@string/renda_mensal"
+                    android:text="@{viewModel.renda}"
                     android:inputType="number"
                     android:maxLength="15"
                     android:textColor="@color/black"

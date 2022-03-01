@@ -49,34 +49,52 @@ public class FirstRegisterFragment extends Fragment {
         sharedViewModel = new ViewModelProvider(requireActivity()).get(RegisterViewModel.class);
         binding.setViewModel(sharedViewModel);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> viewBinding
         binding.btnContinuar.setOnClickListener(view1 -> {
-            if (!binding.txtNome.getText().toString().isEmpty() &&
-                    !binding.edtDataNascimento.getText().toString().isEmpty() &&
-                    !binding.tilCpf.getText().toString().isEmpty() &&
-                    !binding.edtRg.getText().toString().isEmpty() &&
-                    !binding.txtEmail.getText().toString().isEmpty() &&
-                    !binding.txtNumero.getText().toString().isEmpty()) {
+            String nome = binding.edtDataNascimento.getText().toString();
+            String dataNascimento = binding.tilCpf.getText().toString();
+            String cpf = binding.tilCpf.getText().toString();
+            String rg = binding.edtRg.getText().toString();
+            String email = binding.txtEmail.getText().toString();
+            String numero = binding.txtNumero.getText().toString();
+
+            if (!nome.isEmpty() &&
+                    !dataNascimento.isEmpty() &&
+                    !cpf.isEmpty() &&
+                    !rg.isEmpty() &&
+                    !email.isEmpty() &&
+                    !numero.isEmpty()) {
+
+                    sharedViewModel.setNomeCompleto(nome);
+                    sharedViewModel.setDataNascimento(nome);
+                    sharedViewModel.setCpf(nome);
+                    sharedViewModel.setRg(nome);
+                    sharedViewModel.setEmail(nome);
+                    sharedViewModel.setNumero(nome);
 
 
                 goToNextScreen();
 
             } else {
-                if (binding.txtNome.getText().toString().isEmpty()) {
+                if (nome.isEmpty()) {
                     binding.txtNome.setError("Nome obrigatório");
                 }
-                if (binding.edtDataNascimento.getText().toString().isEmpty()) {
+                if (dataNascimento.isEmpty()) {
                     binding.edtDataNascimento.setError("Data de nascimento obrigatório");
                 }
-                if (binding.tilCpf.getText().toString().isEmpty()) {
+                if (cpf.isEmpty()) {
                     binding.tilCpf.setError("CPF obrigatório");
                 }
-                if (binding.edtRg.getText().toString().isEmpty()) {
+                if (rg.isEmpty()) {
                     binding.edtRg.setError("RG obrigatório");
                 }
-                if (binding.txtEmail.getText().toString().isEmpty()) {
+                if (email.isEmpty()) {
                     binding.txtEmail.setError("E-mail obrigatório");
                 }
-                if (binding.txtNumero.getText().toString().isEmpty()) {
+                if (numero.isEmpty()) {
                     binding.txtNumero.setError("Celular obrigatório");
                 }
             }
