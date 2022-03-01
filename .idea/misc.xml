@@ -24,7 +24,7 @@
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_emprestimo_confirmar.xml" value="0.33" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_fifth_register.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_first_register.xml" value="0.42916666666666664" />
-        <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_foto.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_foto.xml" value="0.33" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_fourth_register.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_login.xml" value="0.42916666666666664" />
@@ -39,7 +39,7 @@
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_recarga.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_recarga_validacao.xml" value="0.3488943488943489" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_scan_qrcode.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_scan_qrcode.xml" value="0.25" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_second_register.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_splash.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/activity_termos.xml" value="0.42916666666666664" />
@@ -50,7 +50,7 @@
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/custom_dialog.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/fragment_fifth_register.xml" value="0.30885529157667385" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/fragment_first.xml" value="0.23177083333333334" />
-        <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/fragment_first_register.xml" value="0.4168466522678186" />
+        <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/fragment_first_register.xml" value="0.33" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/fragment_fourth_register.xml" value="0.35135135135135137" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/fragment_second.xml" value="0.23177083333333334" />
         <entry key="..\:/Users/pedro/Desktop/FourPay/app/src/main/res/layout/fragment_second_register.xml" value="0.4168466522678186" />

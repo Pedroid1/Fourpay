@@ -38,6 +38,7 @@ public class FourthRegisterFragment extends Fragment {
             if (!binding.tilSenha.getText().toString().isEmpty() && !binding.edtConfirmarSenha.getText().toString().isEmpty()) {
                 if (binding.tilSenha.getText().toString().equals(binding.edtConfirmarSenha.getText().toString())) {
                     // TODO
+
                 } else {
                     binding.edtConfirmarSenha.setError("As senhas precisam ser identicas");
                 }

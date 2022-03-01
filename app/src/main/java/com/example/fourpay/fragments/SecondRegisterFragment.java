@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.fourpay.databinding.FragmentSecondRegisterBinding;
 import com.example.fourpay.model.RegisterViewModel;

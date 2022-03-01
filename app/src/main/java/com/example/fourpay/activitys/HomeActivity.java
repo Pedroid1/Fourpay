@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Arrays;
 import com.example.fourpay.R;
+import com.example.fourpay.model.Conta;
 import com.example.fourpay.network.ConfiguracaoFirebase;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

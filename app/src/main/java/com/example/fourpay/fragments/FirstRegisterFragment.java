@@ -49,8 +49,6 @@ public class FirstRegisterFragment extends Fragment {
         sharedViewModel = new ViewModelProvider(requireActivity()).get(RegisterViewModel.class);
         binding.setViewModel(sharedViewModel);
 
-        sharedViewModel.setNomeCompleto("Hint atualizado");
-
         binding.btnContinuar.setOnClickListener(view1 -> {
             if (!binding.txtNome.getText().toString().isEmpty() &&
                     !binding.edtDataNascimento.getText().toString().isEmpty() &&
@@ -58,6 +56,7 @@ public class FirstRegisterFragment extends Fragment {
                     !binding.edtRg.getText().toString().isEmpty() &&
                     !binding.txtEmail.getText().toString().isEmpty() &&
                     !binding.txtNumero.getText().toString().isEmpty()) {
+
 
                 goToNextScreen();
 

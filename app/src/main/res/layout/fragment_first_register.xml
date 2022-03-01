@@ -85,11 +85,12 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_nome"
                     android:layout_width="match_parent"
-                    android:text="@{viewModel.nomeCompleto}"
                     android:layout_height="50dp"
                     android:drawableEnd="@drawable/ic_pessoa_dois"
                     android:fontFamily="@font/ubuntu_regular"
+                    android:hint="@string/nome_completo"
                     android:inputType="textPersonName"
+                    android:text="@{viewModel.nomeCompleto}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"
