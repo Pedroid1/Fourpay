@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/seta_esquerda_home"
             android:layout_width="match_parent"
             android:layout_height="380dp"
             android:background="@drawable/background_cartao"
@@ -32,7 +32,7 @@
             android:layout_marginTop="8dp"
             android:src="@drawable/logo_pequena"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+            app:layout_constraintTop_toBottomOf="@+id/seta_esquerda_home" />
 
         <TextView
             android:id="@+id/text1"
@@ -45,7 +45,7 @@
             android:textColor="@color/azul_claro"
             android:textSize="26sp"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+            app:layout_constraintTop_toBottomOf="@+id/seta_esquerda_home" />
 
         <TextView
             android:id="@+id/txt_nome"
@@ -57,7 +57,7 @@
             android:textColor="@color/cinza"
             android:textSize="26sp"
             app:layout_constraintStart_toEndOf="@+id/text1"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+            app:layout_constraintTop_toBottomOf="@+id/seta_esquerda_home" />
 
 
         <TextView

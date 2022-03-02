@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.fourpay.activitys.EmprestimoConfirmarActivity;
-import com.example.fourpay.activitys.PagamentoConfirmadoActivity;
 import com.example.fourpay.activitys.PixDadosActivity;
 import com.example.fourpay.activitys.RecargaValidacaoActivity;
 import com.example.fourpay.activitys.TransferenciaActivity;
@@ -50,7 +49,7 @@ public class SenhaFragment extends Fragment {
 
         btnEnviar = view.findViewById(R.id.btn_enviar);
         edtSenha = view.findViewById(R.id.edt_senha);
-
+        /*
         btnEnviar.setOnClickListener(v -> {
             if (edtSenha.getText().toString().isEmpty())
                 Toast.makeText(getContext(), "Digite a senha", Toast.LENGTH_SHORT).show();
@@ -106,6 +105,8 @@ public class SenhaFragment extends Fragment {
                         }
                     }
 
+
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         Toast.makeText(requireContext(), "Erro ao validar senha", Toast.LENGTH_SHORT).show();
@@ -113,6 +114,8 @@ public class SenhaFragment extends Fragment {
                 });
             }
         });
+
+         */
     }
 
 }

@@ -234,7 +234,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView82" />
 
     <android.widget.Button
-        android:id="@+id/button11"
+        android:id="@+id/card_deposito"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -246,12 +246,12 @@
         android:text="@string/compartilhar"
         android:textColor="@color/outro_branco"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@id/button5"
+        app:layout_constraintBottom_toTopOf="@id/card_pagar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <android.widget.Button
-        android:id="@+id/button5"
+        android:id="@+id/card_pagar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

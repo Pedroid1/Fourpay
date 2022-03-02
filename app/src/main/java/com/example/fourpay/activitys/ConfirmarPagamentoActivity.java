@@ -33,7 +33,7 @@ public class ConfirmarPagamentoActivity extends AppCompatActivity {
         obterDataAtual();
 
         pagarHoje.setTextColor(ActivityCompat.getColor(ConfirmarPagamentoActivity.this, R.color.azul_medio));
-
+        /*
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +48,8 @@ public class ConfirmarPagamentoActivity extends AppCompatActivity {
                 }
             }
         });
+
+         */
 
 
         pagarHoje.setOnClickListener(view -> {
@@ -139,11 +141,13 @@ public class ConfirmarPagamentoActivity extends AppCompatActivity {
                 dataAgendada.setError("Data invalida");
             }
         }, anoAtual, mesAtual, diaAtual);
+        dpd.getDatePicker().setMinDate(System.currentTimeMillis());
         dpd.show();
     }
 
     public void voltarParaHome(View view) {
         startActivity(new Intent(ConfirmarPagamentoActivity.this, HomeActivity.class));
+        finish();
     }
 }
 

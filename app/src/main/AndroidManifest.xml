@@ -18,10 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FourPay">
         <activity
-            android:name=".activitys.RegisterActivity"
-            android:exported="false" />
+            android:name=".activitys.ScanCodigoActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
-            android:name=".activitys.DepositoActivity"
+            android:name=".activitys.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".activitys.MinhasChavesPixActivity"
@@ -31,9 +32,6 @@
             android:exported="false" />
         <activity
             android:name=".activitys.RecargaValidacaoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activitys.ConfiguracaoActivity"
             android:exported="false" />
         <activity
             android:name=".activitys.ChavePixActivity"
@@ -66,13 +64,6 @@
             android:name=".activitys.TransferenciaActivity"
             android:exported="false" />
         <activity
-            android:name=".activitys.ScanQRCodeActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".activitys.PagamentoConfirmadoActivity"
-            android:exported="false" />
-        <activity
             android:name=".activitys.RecargaActivity"
             android:exported="false" />
         <activity
@@ -98,12 +89,10 @@
             android:exported="false" />
         <activity
             android:name=".activitys.SplashActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activitys.MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
