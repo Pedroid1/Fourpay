@@ -6,29 +6,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavHostController;
 import androidx.navigation.fragment.NavHostFragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.fourpay.R;
 import com.example.fourpay.databinding.FragmentFirstRegisterBinding;
-import com.example.fourpay.model.Cliente;
-import com.example.fourpay.model.Conta;
-import com.example.fourpay.model.Endereco;
-import com.example.fourpay.model.RegisterViewModel;
-import com.example.fourpay.retrofit.RetrofitMethods;
-import com.example.fourpay.retrofit.RetrofitService;
-
-import java.util.Date;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
+import com.example.fourpay.model.viewmodel.RegisterViewModel;
 
 public class FirstRegisterFragment extends Fragment {
 
@@ -49,32 +35,28 @@ public class FirstRegisterFragment extends Fragment {
         sharedViewModel = new ViewModelProvider(requireActivity()).get(RegisterViewModel.class);
         binding.setViewModel(sharedViewModel);
 
-<<<<<<< HEAD
-=======
+        binding.imgVoltar.setOnClickListener(view1 -> {
+            backToMain();
+        });
 
->>>>>>> viewBinding
         binding.btnContinuar.setOnClickListener(view1 -> {
-            String nome = binding.edtDataNascimento.getText().toString();
-            String dataNascimento = binding.tilCpf.getText().toString();
+            String nome = binding.txtNome.getText().toString();
+            String dataNascimento = binding.edtDataNascimento.getText().toString();
             String cpf = binding.tilCpf.getText().toString();
-            String rg = binding.edtRg.getText().toString();
             String email = binding.txtEmail.getText().toString();
-            String numero = binding.txtNumero.getText().toString();
+            String telefone = binding.txtNumero.getText().toString();
 
             if (!nome.isEmpty() &&
                     !dataNascimento.isEmpty() &&
                     !cpf.isEmpty() &&
-                    !rg.isEmpty() &&
                     !email.isEmpty() &&
-                    !numero.isEmpty()) {
+                    !telefone.isEmpty()) {
 
                     sharedViewModel.setNomeCompleto(nome);
-                    sharedViewModel.setDataNascimento(nome);
-                    sharedViewModel.setCpf(nome);
-                    sharedViewModel.setRg(nome);
-                    sharedViewModel.setEmail(nome);
-                    sharedViewModel.setNumero(nome);
-
+                    sharedViewModel.setDataNascimento(dataNascimento);
+                    sharedViewModel.setCpf(cpf);
+                    sharedViewModel.setEmail(email);
+                    sharedViewModel.setCelular(telefone);
 
                 goToNextScreen();
 
@@ -88,13 +70,10 @@ public class FirstRegisterFragment extends Fragment {
                 if (cpf.isEmpty()) {
                     binding.tilCpf.setError("CPF obrigatório");
                 }
-                if (rg.isEmpty()) {
-                    binding.edtRg.setError("RG obrigatório");
-                }
                 if (email.isEmpty()) {
                     binding.txtEmail.setError("E-mail obrigatório");
                 }
-                if (numero.isEmpty()) {
+                if (telefone.isEmpty()) {
                     binding.txtNumero.setError("Celular obrigatório");
                 }
             }
@@ -104,4 +83,9 @@ public class FirstRegisterFragment extends Fragment {
     public void goToNextScreen() {
         NavHostFragment.findNavController(FirstRegisterFragment.this).navigate(R.id.action_firstRegisterFragment_to_secondRegisterFragment);
     }
+
+    public void backToMain() {
+        requireActivity().finish();
+    }
+
 }

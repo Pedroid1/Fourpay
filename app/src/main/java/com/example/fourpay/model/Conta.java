@@ -12,7 +12,7 @@ public class Conta implements Serializable {
 
     private Double saldo = 0.0;
 
-    private String senha = "654321";
+    private String senha;
 
     private Cliente cliente = new Cliente();
 
@@ -43,9 +43,5 @@ public class Conta implements Serializable {
 
     public Cliente getCliente() {
         return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
     }
 }

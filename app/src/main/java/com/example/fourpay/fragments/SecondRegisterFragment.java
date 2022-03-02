@@ -6,14 +6,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 
+import com.example.fourpay.R;
 import com.example.fourpay.databinding.FragmentSecondRegisterBinding;
-import com.example.fourpay.model.RegisterViewModel;
+import com.example.fourpay.model.viewmodel.RegisterViewModel;
 
 public class SecondRegisterFragment extends Fragment {
 
@@ -32,41 +33,68 @@ public class SecondRegisterFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         sharedViewModel = new ViewModelProvider(requireActivity()).get(RegisterViewModel.class);
+        binding.setViewModel(sharedViewModel);
+
+        binding.imgVoltar.setOnClickListener(view1 -> {
+            backToFirstFragment();
+        });
 
         binding.btnContinuar.setOnClickListener(view1 -> {
+            String cep = binding.edtCep.getText().toString();
+            String endereco = binding.edtEndereco.getText().toString();
+            String bairro = binding.edtBairro.getText().toString();
+            String cidade = binding.edtCidade.getText().toString();
+            String estado = binding.edtEstado.getText().toString();
+            String numero = binding.edtNumeroCasa.getText().toString();
 
-            if (!binding.edtCep.getText().toString().isEmpty() &&
-                    !binding.edtEndereco.getText().toString().isEmpty() &&
-                    !binding.edtBairro.getText().toString().isEmpty() &&
-                    !binding.edtCidade.getText().toString().isEmpty() &&
-                    !binding.edtEstado.getText().toString().isEmpty() &&
-                    !binding.edtNumeroCasa.getText().toString().isEmpty()) {
+            if (!cep.isEmpty() &&
+                    !endereco.isEmpty() &&
+                    !bairro.isEmpty() &&
+                    !cidade.isEmpty() &&
+                    !estado.isEmpty() &&
+                    !numero.isEmpty()) {
 
-                // TODO
+                sharedViewModel.setCep(cep);
+                sharedViewModel.setEstado(endereco);
+                sharedViewModel.setBairro(bairro);
+                sharedViewModel.setLogradouro(endereco);
+                sharedViewModel.setCidade(cidade);
+                sharedViewModel.setEstado(estado);
+                sharedViewModel.setNumero(numero);
+
+                goToNextScreen();
 
             } else {
 
-                if (binding.edtCep.getText().toString().isEmpty()) {
+                if (cep.isEmpty()) {
                     binding.edtCep.setError("Cambo obrigatório");
                 }
-                if (binding.edtEndereco.getText().toString().isEmpty()) {
+                if (endereco.isEmpty()) {
                     binding.edtEndereco.setError("Cambo obrigatório");
                 }
-                if (binding.edtBairro.getText().toString().isEmpty()) {
+                if (bairro.isEmpty()) {
                     binding.edtBairro.setError("Cambo obrigatório");
                 }
-                if (binding.edtCidade.getText().toString().isEmpty()) {
+                if (cidade.isEmpty()) {
                     binding.edtCidade.setError("Cambo obrigatório");
                 }
-                if (binding.edtEstado.getText().toString().isEmpty()) {
+                if (estado.isEmpty()) {
                     binding.edtEstado.setError("Cambo obrigatório");
                 }
-                if (binding.edtNumeroCasa.getText().toString().isEmpty()) {
+                if (numero.isEmpty()) {
                     binding.edtNumeroCasa.setError("Cambo obrigatório");
                 }
             }
         });
 
 
+    }
+
+    private void backToFirstFragment() {
+        NavHostFragment.findNavController(SecondRegisterFragment.this).navigate(R.id.action_secondRegisterFragment_to_firstRegisterFragment);
+    }
+
+    private void goToNextScreen() {
+        NavHostFragment.findNavController(SecondRegisterFragment.this).navigate(R.id.action_secondRegisterFragment_to_thirdSecondRegister);
     }
 }

@@ -6,17 +6,17 @@ public class Cliente implements Serializable {
 
     private Long id;
 
-    private String cpf = "090.336.044-11";
+    private String cpf;
 
-    private String nome = "Pedro cabelin";
+    private String nome;
 
-    private String dataDeNascimento = "2022-02-23";
+    private String dataDeNascimento;
 
     private Endereco endereco = new Endereco();
 
-    private String email = "pedrao@gmail.com";
+    private String email;
 
-    private String telefone = "+55(74)99963-7391";
+    private String telefone;
 
     public Cliente() {
     }

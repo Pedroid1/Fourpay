@@ -7,17 +7,17 @@ public class Endereco implements Serializable {
 
     private Long id;
 
-    private String logradouro = "Rua doida";
+    private String logradouro;
 
-    private String bairro = "loucura";
+    private String bairro;
 
-    private String cidade = "Irece";
+    private String cidade;
 
-    private String estado = "BA";
+    private String estado;
 
-    private String numero = "150";
+    private String numero;
 
-    private String cep = "44900-000";
+    private String cep;
 
     public Long getId() {
         return id;

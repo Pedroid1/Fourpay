@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.example.fourpay.model.RegisterViewModel" />
+            type="com.example.fourpay.model.viewmodel.RegisterViewModel" />
     </data>
 
     <ScrollView
@@ -29,7 +30,6 @@
                 <ImageView
                     android:id="@+id/img_voltar"
                     android:layout_width="32dp"
-                    android:onClick="voltar"
                     android:layout_height="32dp"
                     android:contentDescription="@string/cd_botao_voltar"
                     android:src="@drawable/ic_voltar"
@@ -86,7 +86,6 @@
                     android:id="@+id/txt_nome"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="Nome Completo"
                     android:drawableEnd="@drawable/ic_pessoa_dois"
                     android:fontFamily="@font/ubuntu_regular"
                     android:hint="@string/nome_completo"
@@ -115,33 +114,9 @@
                     android:drawableEnd="@drawable/ic_documentos"
                     android:fontFamily="@font/ubuntu_regular"
                     android:hint="@string/cpf"
-                    android:text="@{viewModel.cpf}"
                     android:inputType="number"
                     android:maxLength="11"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/azul_claro"
-                    android:textCursorDrawable="@drawable/cursor_custom"
-                    android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textColorHint="@color/azul_claro"
-                app:boxStrokeColor="@color/azul_medio">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt_rg"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:drawableEnd="@drawable/ic_documentos"
-                    android:fontFamily="@font/ubuntu_regular"
-                    android:hint="@string/rg"
-                    android:text="@{viewModel.rg}"
-                    android:inputType="number"
-                    android:maxLength="9"
+                    android:text="@{viewModel.cpf}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"
@@ -163,8 +138,8 @@
                     android:drawableEnd="@drawable/ic_email"
                     android:fontFamily="@font/ubuntu_regular"
                     android:hint="@string/email"
-                    android:text="@{viewModel.email}"
                     android:inputType="textEmailAddress"
+                    android:text="@{viewModel.email}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"
@@ -186,9 +161,9 @@
                     android:drawableEnd="@drawable/ic_celular"
                     android:fontFamily="@font/ubuntu_regular"
                     android:hint="@string/celular"
-                    android:text="@{viewModel.celular}"
                     android:inputType="phone"
                     android:maxLength="11"
+                    android:text="@{viewModel.celular}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"

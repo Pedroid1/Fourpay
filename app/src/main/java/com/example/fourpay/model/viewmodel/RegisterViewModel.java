@@ -1,10 +1,19 @@
-package com.example.fourpay.model;
+package com.example.fourpay.model.viewmodel;
+
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import java.util.Date;
+import com.example.fourpay.model.Conta;
+import com.example.fourpay.retrofit.RetrofitMethods;
+import com.example.fourpay.retrofit.RetrofitService;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class RegisterViewModel extends ViewModel {
 
@@ -14,9 +23,6 @@ public class RegisterViewModel extends ViewModel {
 
     private MutableLiveData<String> _cpf  = new MutableLiveData<>();
     public LiveData<String> cpf = _cpf;
-
-    private MutableLiveData<String> _rg  = new MutableLiveData<>();
-    public LiveData<String> rg = _rg;
 
     private MutableLiveData<String> _email  = new MutableLiveData<>();
     public LiveData<String> email = _email;
@@ -46,76 +52,78 @@ public class RegisterViewModel extends ViewModel {
     private MutableLiveData<String> _estado  = new MutableLiveData<>();
     public LiveData<String> estado = _estado;
 
-    //Fragment 3
-    private MutableLiveData<String> _renda  = new MutableLiveData<>();
-    public LiveData<String> renda = _renda;
-
     //Fragment 4
-    private MutableLiveData<String> _senha1  = new MutableLiveData<>();
-    public LiveData<String> senha1 = _senha1;
+    private MutableLiveData<String> _senha = new MutableLiveData<>();
+    public LiveData<String> senha = _senha;
 
-    private MutableLiveData<String> _senha2  = new MutableLiveData<>();
-    public LiveData<String> senha2 = _senha2;
-
-
+    private Conta conta = new Conta();
 
     public void setNomeCompleto(String nomeCompleto) {
         this._nomeCompleto.setValue(nomeCompleto);
+        conta.getCliente().setNome(nomeCompleto);
     }
 
     public void setCpf(String cpf) {
         this._cpf.setValue(cpf);
-    }
-
-    public void setRg(String rg) {
-        this._rg.setValue(rg);
+        conta.getCliente().setCpf(cpf);
     }
 
     public void setEmail(String email) {
         this._email.setValue(email);
+        conta.getCliente().setEmail(email);
     }
 
     public void setCelular(String celular) {
         this._celular.setValue(celular);
+        conta.getCliente().setTelefone(celular);
     }
 
     public void setDataNascimento(String dataNascimento) {
         this._dataNascimento.setValue(dataNascimento);
+        conta.getCliente().setDataDeNascimento(dataNascimento);
     }
 
     public void setCep(String cep) {
         this._cep.setValue(cep);
+        conta.getCliente().getEndereco().setCep(cep);
     }
 
     public void setLogradouro(String logradouro) {
         this._logradouro.setValue(logradouro);
+        conta.getCliente().getEndereco().setLogradouro(logradouro);
     }
 
     public void setNumero(String numero) {
         this._numero.setValue(numero);
+        conta.getCliente().getEndereco().setNumero(numero);
     }
 
     public void setBairro(String bairro) {
         this._bairro.setValue(bairro);
+        conta.getCliente().getEndereco().setBairro(bairro);
     }
 
     public void setCidade(String cidade) {
         this._cidade.setValue(cidade);
+        conta.getCliente().getEndereco().setCidade(cidade);
     }
 
     public void setEstado(String estado) {
         this._estado.setValue(estado);
+        conta.getCliente().getEndereco().setEstado(estado);
     }
 
-    public void setRenda(String renda) {
-        this._renda.setValue(renda);
+    public void setSenha(String senha) {
+        this._senha.setValue(senha);
+        conta.setSenha(senha);
     }
 
-    public void setSenha1(String senha1) {
-        this._senha1.setValue(senha1);
+    public void setConta(Conta conta) {
+        this.conta = conta;
     }
 
-    public void setSenha2(String senha2) {
-        this._senha2.setValue(senha2);
+    public Conta getConta() {
+        return conta;
     }
+
 }

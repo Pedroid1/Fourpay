@@ -9,10 +9,13 @@ import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
 
 import com.example.fourpay.R;
 
 public class ProgressButton {
+
+    private Context context;
 
     private CardView cardView;
     private ConstraintLayout constraintLayout;
@@ -22,6 +25,7 @@ public class ProgressButton {
     private Animation fade_in;
 
     public ProgressButton(Context context, View view) {
+        this.context = context;
         fade_in = AnimationUtils.loadAnimation(context, R.anim.progress_btn_anim);
         cardView = view.findViewById(R.id.card_view);
         constraintLayout = view.findViewById(R.id.constraint);

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.fourpay.model.RegisterViewModel" />
+            type="com.example.fourpay.model.viewmodel.RegisterViewModel" />
     </data>
 
     <ScrollView
@@ -24,14 +24,12 @@
             <!--  LINEAR TOPO BOAS VINDAS  -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/img_voltar"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:onClick="voltar"
                     android:contentDescription="@string/cd_botao_voltar"
                     android:src="@drawable/ic_voltar"
                     app:layout_constraintStart_toStartOf="parent"
@@ -66,19 +64,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/lato_regular"
                     android:lineSpacingExtra="4dp"
-                    android:text="Estamos quase lá"
+                    android:text="Crie uma senha para entrar no aplicativo"
                     android:textAlignment="center"
                     android:textColor="@color/cinza"
                     android:textSize="18sp"
-                    android:layout_marginTop="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/txt_nome" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-            <!--  LINEAR TOPO BOAS VINDAS  -->
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -89,15 +86,38 @@
                 app:boxStrokeColor="@color/azul_medio">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt_renda"
+                    android:id="@+id/til_senha"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:drawableEnd="@drawable/ic_renda"
+                    android:drawableEnd="@drawable/ic_senha"
                     android:fontFamily="@font/ubuntu_regular"
-                    android:hint="@string/renda_mensal"
-                    android:text="@{viewModel.renda}"
-                    android:inputType="number"
-                    android:maxLength="15"
+                    android:text="@{viewModel.senha}"
+                    android:hint="@string/senha"
+                    android:inputType="numberPassword"
+                    android:maxLength="6"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/azul_claro"
+                    android:textCursorDrawable="@drawable/cursor_custom"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/azul_claro"
+                app:boxStrokeColor="@color/azul_medio">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_confirmar_senha"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableEnd="@drawable/ic_senha"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="@string/confirmar_senha"
+                    android:inputType="numberPassword"
+                    android:maxLength="6"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"
@@ -116,4 +136,3 @@
         </LinearLayout>
     </ScrollView>
 </layout>
-

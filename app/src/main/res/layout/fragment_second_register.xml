@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.example.fourpay.model.RegisterViewModel" />
+            type="com.example.fourpay.model.viewmodel.RegisterViewModel" />
     </data>
 
     <ScrollView
@@ -94,6 +95,7 @@
                     android:hint="@string/cep"
                     android:inputType="number"
                     android:maxLength="8"
+                    android:text="@{viewModel.cep}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"
@@ -114,8 +116,9 @@
                     android:layout_height="50dp"
                     android:drawableEnd="@drawable/ic_endereco_dois"
                     android:fontFamily="@font/ubuntu_regular"
-                    android:hint="@string/endereco"
+                    android:hint="Logradouro"
                     android:inputType="textPostalAddress"
+                    android:text="@{viewModel.logradouro}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"
@@ -138,6 +141,7 @@
                     android:fontFamily="@font/ubuntu_regular"
                     android:hint="@string/numero_da_casa"
                     android:inputType="number"
+                    android:text="@{viewModel.numero}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"
@@ -161,6 +165,7 @@
                     android:hint="@string/bairro"
                     android:inputType="text"
                     android:maxLength="50"
+                    android:text="@{viewModel.bairro}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"
@@ -184,6 +189,7 @@
                     android:hint="@string/cidade"
                     android:inputType="text"
                     android:maxLength="50"
+                    android:text="@{viewModel.cidade}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"
@@ -207,6 +213,7 @@
                     android:hint="@string/estado"
                     android:inputType="text"
                     android:maxLength="50"
+                    android:text="@{viewModel.estado}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
                     android:textCursorDrawable="@drawable/cursor_custom"

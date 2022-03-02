@@ -4,37 +4,50 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.fourpay.R;
 import com.example.fourpay.activitys.animations.ProgressButton;
+import com.example.fourpay.databinding.ActivityLoginBinding;
+import com.example.fourpay.model.Conta;
 import com.example.fourpay.network.ConfiguracaoFirebase;
+import com.example.fourpay.retrofit.RetrofitMethods;
+import com.example.fourpay.retrofit.RetrofitService;
 import com.google.android.material.textfield.TextInputEditText;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextInputEditText edtEmail, edtSenha;
+    private ActivityLoginBinding binding = null;
+
     private View myProgressButton;
     private ProgressButton progressButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         initialWork();
 
         myProgressButton.setOnClickListener(view -> {
 
-            if (!edtEmail.getText().toString().isEmpty() && !edtSenha.getText().toString().isEmpty()) {
-                progressButton = new ProgressButton(this, view);
-                progressButton.buttonActivated();
-                if (validadeEmailAddress(edtEmail.getText().toString())) {
+            if (!binding.txtEmail.getText().toString().isEmpty() && !binding.edtSenha.getText().toString().isEmpty()) {
+                if (validadeEmailAddress(binding.txtEmail.getText().toString())) {
+
+                    progressButton = new ProgressButton(this, view);
+                    progressButton.buttonActivated();
                     logar();
+
                 } else {
-                    edtEmail.setError("E-mail inválido");
+                    binding.txtEmail.setError("E-mail inválido");
                 }
             }
         });
@@ -42,21 +55,35 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void logar() {
-        ConfiguracaoFirebase.getFirebaseInstance().signInWithEmailAndPassword(edtEmail.getText().toString(), edtSenha.getText().toString())
-                .addOnCompleteListener(this, task -> {
-                    if (task.isSuccessful()) {
-                        progressButton.buttonFinishedSucess();
-                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+        RetrofitMethods methods = RetrofitService.getRetrofitInstance().create(RetrofitMethods.class);
+        Call<Conta> data = methods.contaLogin(binding.txtEmail.getText().toString(), binding.edtSenha.getText().toString());
 
-                    } else {
-                        Toast.makeText(LoginActivity.this, "Erro ao logar", Toast.LENGTH_SHORT).show();
-                    }
-                });
+        data.enqueue(new Callback<Conta>() {
+            @Override
+            public void onResponse(Call<Conta> call, Response<Conta> response) {
+                if (response.isSuccessful()) {
+                    progressButton.buttonFinishedSucess();
+                    goToNextScreen(response.body().getId());
+                } else {
+                    Log.d("LoginActivity", response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Conta> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void goToNextScreen(Long id) {
+        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+        intent.putExtra(HomeActivity.KEY_ID, id);
+        startActivity(intent);
+        finish();
     }
 
     private void initialWork() {
-        edtEmail = findViewById(R.id.txt_email);
-        edtSenha = findViewById(R.id.edt_senha);
         myProgressButton = findViewById(R.id.btn_acessar);
     }
 
@@ -66,5 +93,9 @@ public class LoginActivity extends AppCompatActivity {
         else
             return false;
 
+    }
+
+    public void voltar(View view) {
+        finish();
     }
 }
