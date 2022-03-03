@@ -16,7 +16,7 @@ public class PixActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pix);
     }
 
-    public void abrirTransferenciaPix(View view) {
+    /*public void abrirTransferenciaPix(View view) {
         startActivity(new Intent(PixActivity.this, TransferenciaPixActivity.class));
     }
 
@@ -25,5 +25,5 @@ public class PixActivity extends AppCompatActivity {
 
     public void voltar(View view) {
         finish();
-    }
+    }*/
 }

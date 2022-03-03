@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_depositoFragment"
             app:destination="@id/depositoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pixFragment"
+            app:destination="@id/pixFragment" />
     </fragment>
     <fragment
         android:id="@+id/configuracaoFragment"
@@ -49,5 +52,21 @@
         <action
             android:id="@+id/action_pagamentoConfirmacaoFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixFragment"
+        android:name="com.example.fourpay.fragments.PixFragment"
+        android:label="PixFragment" >
+        <action
+            android:id="@+id/action_pixFragment_to_pixDadosFragment"
+            app:destination="@id/pixDadosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixDadosFragment"
+        android:name="com.example.fourpay.fragments.PixDadosFragment"
+        android:label="PixDadosFragment" >
+        <action
+            android:id="@+id/action_pixDadosFragment_to_pagamentoConfirmacaoFragment"
+            app:destination="@id/pagamentoConfirmacaoFragment" />
     </fragment>
 </navigation>

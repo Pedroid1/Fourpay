@@ -155,8 +155,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="168" />
-                            <option name="y" value="108" />
+                            <option name="x" value="179" />
+                            <option name="y" value="333" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -197,19 +197,12 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_homeFragment_to_pixFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="nav_graph_register">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="764" />
-                            <option name="y" value="-203" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -219,13 +212,46 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="440" />
-                            <option name="y" value="113" />
+                            <option name="x" value="420" />
+                            <option name="y" value="68" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
                             <entry key="action_pagamentoConfirmacaoFragment_to_homeFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="pixDadosFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="86" />
+                            <option name="y" value="-746" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="pixFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-55" />
+                            <option name="y" value="-436" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_pixFragment_to_pixDadosFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

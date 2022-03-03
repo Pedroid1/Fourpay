@@ -50,6 +50,10 @@ public class HomeFragment extends Fragment {
             viewModel.getCurrentUser(id);
         }
 
+        binding.cardPix.setOnClickListener(view1 -> {
+            NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_pixFragment);
+        });
+
 
         binding.setaEsquerdaHome.setOnClickListener(view1 -> {
             abrirConfiguracao();
