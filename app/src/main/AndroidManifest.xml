@@ -23,7 +23,13 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".activitys.RegisterActivity"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activitys.MinhasChavesPixActivity"
             android:exported="false" />
@@ -41,7 +47,7 @@
             android:exported="false" />
         <activity
             android:name=".activitys.ConfirmarPagamentoActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activitys.ComprovantePagamentoActivity"
             android:exported="false" />
@@ -89,15 +95,11 @@
             android:exported="false" />
         <activity
             android:name=".activitys.SplashActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".activitys.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

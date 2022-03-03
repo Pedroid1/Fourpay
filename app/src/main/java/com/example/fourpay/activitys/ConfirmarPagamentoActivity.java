@@ -95,9 +95,21 @@ public class ConfirmarPagamentoActivity extends AppCompatActivity {
         int mesAtual = calAtual.get(Calendar.MONTH);
         int diaAtual = calAtual.get(Calendar.DAY_OF_MONTH);
 
-        String fecha1 = diaAtual + "/0" + (mesAtual + 1) + "/" + anoAtual;
+        String fecha = "";
+        if(diaAtual < 10){
+            fecha += "0" + diaAtual + "/";
+        }else{
+            fecha += diaAtual + "/";
+        }
 
-        data.setText(fecha1);
+        if(mesAtual < 10){
+            fecha += "0" + (mesAtual+1 + "/");
+        }else{
+            fecha += (mesAtual+1 + "/");
+        }
+        fecha += anoAtual;
+
+        data.setText(fecha);
         data.setTextColor(ActivityCompat.getColor(ConfirmarPagamentoActivity.this, R.color.azul_medio));
     }
 
@@ -121,13 +133,28 @@ public class ConfirmarPagamentoActivity extends AppCompatActivity {
     }
 
     public void abrirCalendario() {
+
         Calendar cal = Calendar.getInstance();
         int anoAtual = cal.get(Calendar.YEAR);
         int mesAtual = cal.get(Calendar.MONTH);
         int diaAtual = cal.get(Calendar.DAY_OF_MONTH);
 
         DatePickerDialog dpd = new DatePickerDialog(ConfirmarPagamentoActivity.this, (datePicker, anoSelecionado, mesSelecionado, diaSelecionado) -> {
-            String fecha = diaSelecionado + "/0" + (mesSelecionado + 1) + "/" + anoSelecionado;
+            String fecha = "";
+            if(diaSelecionado < 10){
+                fecha += "0" + diaSelecionado + "/";
+            }else{
+                fecha += diaSelecionado + "/";
+            }
+
+            if(mesSelecionado < 10){
+                fecha += "0" + (mesSelecionado+1 + "/");
+            }else{
+                fecha += (mesSelecionado+1 + "/");
+            }
+            fecha += anoSelecionado;
+
+
             dataAgendada.setText(fecha);
 
             Date dataAtual = new Date(anoAtual, mesAtual, diaAtual);

@@ -104,18 +104,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:hint="@string/cpf"
                 android:textColorHint="@color/azul_claro"
                 app:boxStrokeColor="@color/azul_medio">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.vicmikhailau.maskededittext.MaskedEditText
                     android:id="@+id/til_cpf"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:drawableEnd="@drawable/ic_documentos"
                     android:fontFamily="@font/ubuntu_regular"
-                    android:hint="@string/cpf"
+                    app:mask="###.###.###-##"
                     android:inputType="number"
-                    android:maxLength="11"
+                    android:maxLength="14"
                     android:text="@{viewModel.cpf}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
@@ -151,18 +152,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:hint="@string/celular"
                 android:textColorHint="@color/azul_claro"
                 app:boxStrokeColor="@color/azul_medio">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.vicmikhailau.maskededittext.MaskedEditText
                     android:id="@+id/txt_numero"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:drawableEnd="@drawable/ic_celular"
                     android:fontFamily="@font/ubuntu_regular"
-                    android:hint="@string/celular"
-                    android:inputType="phone"
-                    android:maxLength="11"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    app:mask="### #####-####"
                     android:text="@{viewModel.celular}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
@@ -175,16 +177,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:hint="@string/data_de_nascimento"
                 android:textColorHint="@color/azul_claro"
                 app:boxStrokeColor="@color/azul_medio">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.vicmikhailau.maskededittext.MaskedEditText
                     android:id="@+id/edt_data_nascimento"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:drawableEnd="@drawable/ic_calendar"
                     android:fontFamily="@font/ubuntu_regular"
-                    android:hint="@string/data_de_nascimento"
+                    app:mask="##/##/####"
                     android:inputType="date"
                     android:maxLength="10"
                     android:text="@{viewModel.dataNascimento}"

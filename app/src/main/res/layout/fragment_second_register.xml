@@ -83,18 +83,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:hint="@string/cep"
                 android:textColorHint="@color/azul_claro"
                 app:boxStrokeColor="@color/azul_medio">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.vicmikhailau.maskededittext.MaskedEditText
                     android:id="@+id/edt_cep"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:drawableEnd="@drawable/ic_cep"
                     android:fontFamily="@font/ubuntu_regular"
-                    android:hint="@string/cep"
+                    app:mask="#####-###"
                     android:inputType="number"
-                    android:maxLength="8"
+                    android:maxLength="9"
                     android:text="@{viewModel.cep}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/azul_claro"
