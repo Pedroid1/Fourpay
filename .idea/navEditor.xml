@@ -155,8 +155,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="168" />
-                            <option name="y" value="108" />
+                            <option name="x" value="108" />
+                            <option name="y" value="414" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -202,18 +202,6 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="nav_graph_register">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="764" />
-                            <option name="y" value="-203" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="pagamentoConfirmacaoFragment">
                     <value>
                       <LayoutPositions>
@@ -240,8 +228,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="329" />
-                            <option name="y" value="-486" />
+                            <option name="x" value="430" />
+                            <option name="y" value="-223" />
                           </Point>
                         </option>
                       </LayoutPositions>

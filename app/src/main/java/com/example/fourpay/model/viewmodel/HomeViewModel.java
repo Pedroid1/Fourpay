@@ -19,7 +19,7 @@ public class HomeViewModel extends ViewModel {
     private RetrofitMethods methods = RetrofitService.getRetrofitInstance().create(RetrofitMethods.class);
 
     //Current conta
-    private Conta conta = null;
+    private Conta conta;
 
     private MutableLiveData<String> _nome = new MutableLiveData<>();
     public LiveData<String> nome = _nome;
