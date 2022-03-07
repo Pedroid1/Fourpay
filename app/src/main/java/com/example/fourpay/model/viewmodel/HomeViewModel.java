@@ -36,6 +36,18 @@ public class HomeViewModel extends ViewModel {
     private MutableLiveData<String> _telefone = new MutableLiveData<>();
     public LiveData<String> telefone = _telefone;
 
+    // Tela de Emprestimo
+
+    private MutableLiveData<String> _diaPagamento = new MutableLiveData<>();
+    public LiveData<String> diaPagamento = _diaPagamento;
+
+    private MutableLiveData<String> _parcelas = new MutableLiveData<>();
+    public LiveData<String> parcelas = _parcelas;
+
+    private MutableLiveData<String> _valorSimulado = new MutableLiveData<>();
+    public LiveData<String> valorSimulado = _valorSimulado;
+
+
     public Conta getConta() {
         return conta;
     }
@@ -84,5 +96,33 @@ public class HomeViewModel extends ViewModel {
             public void onFailure(Call<Conta> call, Throwable t) {
             }
         });
+    }
+
+    public void setMethods(RetrofitMethods methods) {
+        this.methods = methods;
+    }
+
+    public void set_diaPagamento(String diaPagamento) {
+        this._diaPagamento.setValue(diaPagamento);
+    }
+
+    public void set_parcelas(String parcelas) {
+        this._parcelas.setValue(parcelas);
+    }
+
+    public void set_valorSimulado(String valorSimulado) {
+        this._valorSimulado.setValue(valorSimulado);
+    }
+
+    public LiveData<String> getDiaPagamento() {
+        return diaPagamento;
+    }
+
+    public LiveData<String> getParcelas() {
+        return parcelas;
+    }
+
+    public LiveData<String> getValorSimulado() {
+        return valorSimulado;
     }
 }

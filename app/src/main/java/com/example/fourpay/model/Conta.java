@@ -10,7 +10,7 @@ public class Conta implements Serializable {
 
     private Long id;
 
-    private Double saldo = 0.0;
+    private Double saldo = 0.0d;
 
     private String senha;
 

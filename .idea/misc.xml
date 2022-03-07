@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/edubarbosa/AndroidStudioProjects/Fourpay/app/src/main/res/layout/activity_emprestimo.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/edubarbosa/AndroidStudioProjects/Fourpay/app/src/main/res/layout/activity_emprestimo_confirmar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/edubarbosa/AndroidStudioProjects/Fourpay/app/src/main/res/layout/activity_home.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/edubarbosa/AndroidStudioProjects/Fourpay/app/src/main/res/layout/fragment_confirmacao_emprestimo.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/edubarbosa/AndroidStudioProjects/Fourpay/app/src/main/res/layout/fragment_emprestimo.xml" value="0.1" />
+        <entry key="..\:/Users/edubarbosa/AndroidStudioProjects/Fourpay/app/src/main/res/layout/fragment_home.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/edubarbosa/AndroidStudioProjects/Fourpay/app/src/main/res/layout/fragment_teste.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/lgiurizato/AndroidStudioProjects/Fourpay/app/src/main/res/layout/fragment_first_register.xml" value="0.2" />
         <entry key="..\:/Users/lgiurizato/AndroidStudioProjects/Fourpay/app/src/main/res/layout/fragment_fourth_register.xml" value="0.259375" />
         <entry key="..\:/Users/lgiurizato/AndroidStudioProjects/Fourpay/app/src/main/res/layout/fragment_second_register.xml" value="0.259375" />

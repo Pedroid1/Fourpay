@@ -62,6 +62,14 @@ public class HomeFragment extends Fragment {
         binding.cardPagar.setOnClickListener(view1 -> {
             abrirPagamento();
         });
+
+        binding.setaEmprestimo.setOnClickListener(view1 -> {
+            abrirEmprestimo();
+        });
+    }
+
+    private void abrirEmprestimo() {
+        NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_emprestimoFragment);
     }
 
     private void abrirPagamento() {

@@ -6,7 +6,7 @@
     tools:context=".activitys.RecargaValidacaoActivity">
 
     <android.widget.Button
-        android:id="@+id/button2"
+        android:id="@+id/btnVoltar"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="25dp"
@@ -42,7 +42,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltar" />
 
     <TextView
         android:id="@+id/textView13"

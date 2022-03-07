@@ -48,7 +48,7 @@ public class RecargaFragment extends Fragment {
             String numCelular = binding.txtTelefone.getText().toString();
 
 
-            if (!recargaSelect.isEmpty() && !pagamentoSelect.isEmpty() && !operadoraSelect.isEmpty() && !numCelular.isEmpty() && Patterns.PHONE.matcher(numCelular).matches()) {
+            /*if (!recargaSelect.isEmpty() && !pagamentoSelect.isEmpty() && !operadoraSelect.isEmpty() && !numCelular.isEmpty() && Patterns.PHONE.matcher(numCelular).matches()) {
                 Bundle args = new Bundle();
 
                 Intent intent = new Intent();
@@ -74,7 +74,7 @@ public class RecargaFragment extends Fragment {
                     ((TextView) binding.operadora.getSelectedView()).setError("Selecione um dos campos");
                 }
 
-            }
+            }*/
         });
     }
 }

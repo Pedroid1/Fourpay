@@ -16,6 +16,10 @@
         <action
             android:id="@+id/action_homeFragment_to_depositoFragment"
             app:destination="@id/depositoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_emprestimoFragment"
+            app:destination="@id/emprestimoFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/configuracaoFragment"
@@ -49,5 +53,31 @@
         <action
             android:id="@+id/action_pagamentoConfirmacaoFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/emprestimoFragment"
+        android:name="com.example.fourpay.fragments.EmprestimoFragment"
+        android:label="EmprestimoFragment"
+        tools:layout="@layout/fragment_emprestimo">
+        <action
+            android:id="@+id/action_emprestimoFragment_to_confirmacaoEmprestimoFragment"
+            app:destination="@id/confirmacaoEmprestimoFragment" />
+        <action
+            android:id="@+id/action_emprestimoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmacaoEmprestimoFragment"
+        android:name="com.example.fourpay.fragments.ConfirmacaoEmprestimoFragment"
+        android:label="ConfirmacaoEmprestimoFragment"
+        tools:layout="@layout/fragment_confirmacao_emprestimo">
+        <action
+            android:id="@+id/action_confirmacaoEmprestimoFragment_to_emprestimoFragment"
+            app:destination="@id/emprestimoFragment" />
+        <action
+            android:id="@+id/action_confirmacaoEmprestimoFragment_to_pagamentoRealizadoFragment"
+            app:destination="@id/pagamentoConfirmacaoFragment" />
     </fragment>
 </navigation>
